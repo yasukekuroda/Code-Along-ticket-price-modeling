@@ -1,5 +1,8 @@
-export function add(x: number, y: number): number {
-  return x + y;
-}
 
-console.log(add(2, 3));
+
+console.log(`
+最適なプランは「」です。
+現在日時はで、料金は
+
+円です。
+`);
