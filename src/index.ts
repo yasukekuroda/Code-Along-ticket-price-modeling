@@ -1,4 +1,4 @@
-function add(x: number, y: number): number {
+export function add(x: number, y: number): number {
     return x + y;
 }
 

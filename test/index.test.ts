@@ -1,3 +1,5 @@
+import { add } from "./index";
+
 test('two plus two is four', () => {
-  expect(2 + 2).toBe(4);
+  expect(add(2, 3)).toBe(5);
 });
