@@ -1,6 +1,4 @@
 {
-  "preset": "ts-jest",
-  "moduleNameMapper": {
-    "^index$": "<rootDir>/src/index.ts"
-  }
+  "transform": { "^.+\\.ts?$": "ts-jest" },
+  "moduleDirectories": ["node_modules", "src"]
 }

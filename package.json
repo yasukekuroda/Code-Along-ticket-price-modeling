@@ -10,7 +10,7 @@
   "author": "",
   "main": "index.ts",
   "scripts": {
-    "format": "prettier --write 'src/**'",
+  "format": "prettier --write 'src/**' 'test/**'",
     "test": "jest"
   },
   "devDependencies": {
