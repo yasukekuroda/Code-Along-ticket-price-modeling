@@ -8,7 +8,7 @@
   },
   "license": "ISC",
   "author": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "jest"
   },
