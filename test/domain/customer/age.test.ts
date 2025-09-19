@@ -1,4 +1,4 @@
-import { Age } from "domain/customer/age";
+import { Age } from "domain/customer";
 
 describe("Age", () => {
   describe("new", () => {
