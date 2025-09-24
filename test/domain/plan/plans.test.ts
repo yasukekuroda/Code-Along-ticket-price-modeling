@@ -13,9 +13,7 @@ describe("Plans", () => {
   });
 
   describe("availablePlans", () => {
-    const customer = new Customer(
-      new Age(30),
-    );
+    const customer = new Customer(new Age(30));
 
     test("plansが空の場合は0を返す", () => {
       expect(new Plans([]).availablePlans(customer).count()).toBe(0);
