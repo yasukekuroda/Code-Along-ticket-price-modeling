@@ -7,4 +7,8 @@ export class Price {
     if (value < this.MINIMUM_PRICE) throw new Error("価格が不正です");
     if (value > this.MAXIMUM_PRICE) throw new Error("価格が不正です");
   }
+
+  get getValue(): number {
+    return this.value;
+  }
 }
