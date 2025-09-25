@@ -13,31 +13,31 @@ describe("CinemaDate", () => {
   describe("#isWeekDay", () => {
     test("月曜日の場合はtrueを返す", () => {
       const monday = nextMonday(new Date());
-      expect(new CinemaDate(monday).isWeekday()).toBe(true);
+      expect(new CinemaDate(monday).isWeekDay()).toBe(true);
     });
     test("火曜日の場合はtrueを返す", () => {
       const tuesday = nextTuesday(new Date());
-      expect(new CinemaDate(tuesday).isWeekday()).toBe(true);
+      expect(new CinemaDate(tuesday).isWeekDay()).toBe(true);
     });
     test("水曜日の場合はtrueを返す", () => {
       const wednesday = nextWednesday(new Date());
-      expect(new CinemaDate(wednesday).isWeekday()).toBe(true);
+      expect(new CinemaDate(wednesday).isWeekDay()).toBe(true);
     });
     test("木曜日の場合はtrueを返す", () => {
       const thursday = nextThursday(new Date());
-      expect(new CinemaDate(thursday).isWeekday()).toBe(true);
+      expect(new CinemaDate(thursday).isWeekDay()).toBe(true);
     });
     test("金曜日の場合はtrueを返す", () => {
       const friday = nextFriday(new Date());
-      expect(new CinemaDate(friday).isWeekday()).toBe(true);
+      expect(new CinemaDate(friday).isWeekDay()).toBe(true);
     });
     test("土曜日の場合はfalseを返す", () => {
       const saturday = nextSaturday(new Date());
-      expect(new CinemaDate(saturday).isWeekday()).toBe(false);
+      expect(new CinemaDate(saturday).isWeekDay()).toBe(false);
     });
     test("日曜日の場合はfalseを返す", () => {
       const sunday = nextSunday(new Date());
-      expect(new CinemaDate(sunday).isWeekday()).toBe(false);
+      expect(new CinemaDate(sunday).isWeekDay()).toBe(false);
     });
   });
 

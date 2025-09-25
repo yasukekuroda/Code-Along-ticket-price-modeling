@@ -19,7 +19,7 @@ export class Plans {
 
   bestPricePlan(date: CinemaDate): Plan {
     return this.plans.reduce((prev, current) => {
-      return prev.price(date).getValue < current.price(date).getValue
+      return prev.price(date).value < current.price(date).value
         ? prev
         : current;
     });

@@ -1,5 +1,11 @@
 import { BestPlanCalculator } from "domain/bestPlanCalculator";
-import { Age, CINEMA_CITIZEN_CATEGORY, Customer, DISABILITY_CATEGORY, SCHOOL_CATEGORY } from "domain/customer";
+import {
+  Age,
+  CINEMA_CITIZEN_CATEGORY,
+  Customer,
+  DISABILITY_CATEGORY,
+  SCHOOL_CATEGORY,
+} from "domain/customer";
 import { CinemaDate } from "domain/date";
 
 const customer = new Customer(

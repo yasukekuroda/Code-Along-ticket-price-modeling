@@ -7,9 +7,9 @@ import {
 
 export class Customer {
   constructor(
-    private readonly age: Age,
-    private readonly cinemaCitizenCategory: CINEMA_CITIZEN_CATEGORY,
-    private readonly disabilityCategory: DISABILITY_CATEGORY,
-    private readonly schoolCategory: SCHOOL_CATEGORY,
+    public readonly age: Age,
+    public readonly cinemaCitizenCategory: CINEMA_CITIZEN_CATEGORY,
+    public readonly disabilityCategory: DISABILITY_CATEGORY,
+    public readonly schoolCategory: SCHOOL_CATEGORY,
   ) {}
 }
