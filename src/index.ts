@@ -9,7 +9,7 @@ import {
 import { CinemaDate } from "domain/date";
 
 const customer = new Customer(
-  new Age(20),
+  new Age(70),
   CINEMA_CITIZEN_CATEGORY.Guest,
   DISABILITY_CATEGORY.None,
   SCHOOL_CATEGORY.University,

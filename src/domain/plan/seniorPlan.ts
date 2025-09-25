@@ -15,6 +15,6 @@ export const SeniorPlan: Plan = class {
   }
 
   static price(date: CinemaDate): Price {
-    return new Price(1000);
+    return new Price(1300);
   }
 };
