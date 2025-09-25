@@ -8,3 +8,4 @@ export * from "domain/plan/cinemaCitizenSeniorPlan";
 export * from "domain/plan/universityStudentPlan";
 export * from "domain/plan/highSchoolStudentPlan";
 export * from "domain/plan/infantAndElementarySchoolStudentPlan";
+export * from "domain/plan/disabilityPlan";
