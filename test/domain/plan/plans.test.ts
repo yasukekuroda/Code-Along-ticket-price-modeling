@@ -6,7 +6,7 @@ import {
   SCHOOL_CATEGORY,
 } from "domain/customer";
 import { CinemaDate } from "domain/date";
-import { Plan, Plans, allPlans, GeneralPlan } from "domain/plan";
+import { Plan, Plans, allPlans, CinemaCitizenSeniorPlan } from "domain/plan";
 
 describe("Plans", () => {
   describe("count", () => {
@@ -43,7 +43,7 @@ describe("Plans", () => {
     });
 
     test("Plansが空ではない場合は最も安いPlanを返す", () => {
-      expect(allPlans.bestPricePlan(new CinemaDate())).toBe(GeneralPlan); // 今後、他のPlanが追加された場合に、このテストが落ちる可能性がある.
+      expect(allPlans.bestPricePlan(new CinemaDate())).toBe(CinemaCitizenSeniorPlan); // 今後、他のPlanが追加された場合に、このテストが落ちる可能性がある.
     });
   });
 });

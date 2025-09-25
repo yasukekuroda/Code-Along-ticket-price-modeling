@@ -3,14 +3,14 @@ import { CinemaDate } from "domain/date";
 import { Price } from "domain/plan";
 import { Plan } from "domain/plan/plan";
 
-export const CinemaCitizenPlan: Plan = class {
-  static readonly MAXIMUM_AGE = 59;
+export const CinemaCitizenSeniorPlan: Plan = class {
+  static readonly MINIMUM_AGE = 60;
   static planName(): string {
-    return "シネマシティズン";
+    return "シネマシティズン（60才以上）";
   }
 
   static isAvailable(customer: Customer): boolean {
-    if (customer.age.value > this.MAXIMUM_AGE) return false;
+    if (customer.age.value < this.MINIMUM_AGE) return false;
     if (customer.cinemaCitizenCategory !== CINEMA_CITIZEN_CATEGORY.Member)
       return false;
 
@@ -18,10 +18,6 @@ export const CinemaCitizenPlan: Plan = class {
   }
 
   static price(date: CinemaDate): Price {
-    if (date.isWeekDay()) return new Price(1000);
-    if (date.isLateShow()) return new Price(1000);
-    if (date.isCinemaDay()) return new Price(1300);
-
-    return new Price(1300);
+    return new Price(1000);
   }
 };

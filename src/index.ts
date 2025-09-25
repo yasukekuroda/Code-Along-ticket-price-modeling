@@ -20,6 +20,6 @@ const bestPlan = BestPlanCalculator.calculate(customer, date);
 console.log(
   `最適なプランは「${bestPlan.planName()}」です。
     現在日時は${date.toLocaleString()}で、料金は${
-      bestPlan.price(date).getValue
+      bestPlan.price(date).value
     }円です。`,
 );
