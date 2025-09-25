@@ -22,7 +22,9 @@ describe("Plans", () => {
     test("plansが空ではない場合は利用可能なplansの数を返す", () => {
       const availablePlans = allPlans.availablePlans(customer);
       expect(availablePlans.count()).toBeGreaterThan(0);
-      expect(availablePlans.availablePlans(customer).count()).toBeGreaterThan(0);
+      expect(availablePlans.availablePlans(customer).count()).toBeGreaterThan(
+        0,
+      );
     });
   });
 });
