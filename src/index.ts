@@ -1,8 +1,13 @@
 import { BestPlanCalculator } from "domain/bestPlanCalculator";
-import { Age, Customer } from "domain/customer";
+import { Age, CINEMA_CITIZEN_CATEGORY, Customer, DISABILITY_CATEGORY, SCHOOL_CATEGORY } from "domain/customer";
 import { CinemaDate } from "domain/date";
 
-const customer = new Customer(new Age(20));
+const customer = new Customer(
+  new Age(20),
+  CINEMA_CITIZEN_CATEGORY.Guest,
+  DISABILITY_CATEGORY.None,
+  SCHOOL_CATEGORY.University,
+);
 const date = new CinemaDate();
 const bestPlan = BestPlanCalculator.calculate(customer, date);
 
