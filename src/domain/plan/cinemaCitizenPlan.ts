@@ -18,9 +18,9 @@ export const CinemaCitizenPlan: Plan = class {
   }
 
   static price(date: CinemaDate): Price {
-    if (date.isCinemaDay()) return new Price(1300);
     if (date.isWeekDay()) return new Price(1000);
     if (date.isLateShow()) return new Price(1000);
+    if (date.isCinemaDay()) return new Price(1300);
 
     return new Price(1300);
   }
