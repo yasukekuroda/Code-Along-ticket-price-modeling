@@ -43,7 +43,9 @@ describe("Plans", () => {
     });
 
     test("Plansが空ではない場合は最も安いPlanを返す", () => {
-      expect(allPlans.bestPricePlan(new CinemaDate())).toBe(CinemaCitizenSeniorPlan); // 今後、他のPlanが追加された場合に、このテストが落ちる可能性がある.
+      expect(allPlans.bestPricePlan(new CinemaDate())).toBe(
+        CinemaCitizenSeniorPlan,
+      ); // 今後、他のPlanが追加された場合に、このテストが落ちる可能性がある.
     });
   });
 });
