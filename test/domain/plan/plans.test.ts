@@ -1,5 +1,12 @@
-import { Age, Customer } from "domain/customer";
-import { Plan, Plans, allPlans } from "domain/plan";
+import {
+  Age,
+  CINEMA_CITIZEN_CATEGORY,
+  Customer,
+  DISABILITY_CATEGORY,
+  SCHOOL_CATEGORY,
+} from "domain/customer";
+import { CinemaDate } from "domain/date";
+import { Plan, Plans, allPlans, GeneralPlan } from "domain/plan";
 
 describe("Plans", () => {
   describe("count", () => {
@@ -13,18 +20,30 @@ describe("Plans", () => {
   });
 
   describe("availablePlans", () => {
-    const customer = new Customer(new Age(30));
-
+    const customer = new Customer(
+      new Age(30),
+      CINEMA_CITIZEN_CATEGORY.Guest,
+      DISABILITY_CATEGORY.None,
+      SCHOOL_CATEGORY.None,
+    );
     test("plansが空の場合は0を返す", () => {
-      expect(new Plans([]).availablePlans(customer).count()).toBe(0);
+      expect(new Plans([]).count()).toBe(0);
     });
 
     test("plansが空ではない場合は利用可能なplansの数を返す", () => {
       const availablePlans = allPlans.availablePlans(customer);
-      expect(availablePlans.count()).toBeGreaterThan(0);
-      expect(availablePlans.availablePlans(customer).count()).toBeGreaterThan(
-        0,
-      );
+      expect(availablePlans.count()).toBe(1);
+      expect(availablePlans.availablePlans(customer).count()).toBe(1);
+    });
+  });
+
+  describe("bestPricePlan", () => {
+    test("plansが空の場合は例外を投げる", () => {
+      expect(() => new Plans([]).bestPricePlan(new CinemaDate())).toThrow();
+    });
+
+    test("Plansが空ではない場合は最も安いPlanを返す", () => {
+      expect(allPlans.bestPricePlan(new CinemaDate())).toBe(GeneralPlan); // 今後、他のPlanが追加された場合に、このテストが落ちる可能性がある.
     });
   });
 });

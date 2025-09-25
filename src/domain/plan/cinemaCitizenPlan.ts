@@ -1,7 +1,4 @@
-import {
-    CINEMA_CITIZEN_CATEGORY,
-    Customer
-} from "domain/customer";
+import { CINEMA_CITIZEN_CATEGORY, Customer } from "domain/customer";
 import { CinemaDate } from "domain/date";
 import { Price } from "domain/plan";
 import { Plan } from "domain/plan/plan";
