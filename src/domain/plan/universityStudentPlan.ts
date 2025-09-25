@@ -8,12 +8,12 @@ export const UniversityStudentPlan: Plan = class {
   }
 
   static isAvailable(customer: Customer): boolean {
-    const availableCategories: SCHOOL_CATEGORY[] = [
-      SCHOOL_CATEGORY.University,
-      SCHOOL_CATEGORY.VocationalSchool,
-      SCHOOL_CATEGORY.GraduateSchool,
-    ];
-    return availableCategories.includes(customer.schoolCategory);
+    if (customer.schoolCategory === SCHOOL_CATEGORY.University) return true;
+    if (customer.schoolCategory === SCHOOL_CATEGORY.VocationalSchool)
+      return true;
+    if (customer.schoolCategory === SCHOOL_CATEGORY.GraduateSchool) return true;
+
+    return false;
   }
 
   static price(date: CinemaDate): Price {
