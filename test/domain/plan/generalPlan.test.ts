@@ -58,12 +58,12 @@ describe("GeneralPlan", () => {
       });
 
       test("土日20時までの場合、2000円を返す", () => {
-        const cinemaWeekday = new CinemaDate("2025-11-27T19:59:59.000+09:00");
+        const cinemaWeekday = new CinemaDate("2025-09-27T19:59:59.000+09:00");
         expect(GeneralPlan.price(cinemaWeekday).value).toBe(2000);
       });
 
       test("土日20時以降の場合、1500円を返す", () => {
-        const cinemaWeekday = new CinemaDate("2025-11-27T20:00:00.000+09:00");
+        const cinemaWeekday = new CinemaDate("2025-09-27T20:00:00.000+09:00");
         expect(GeneralPlan.price(cinemaWeekday).value).toBe(1500);
       });
     });
