@@ -9,10 +9,10 @@ import {
 import { CinemaDate } from "domain/date";
 
 const customer = new Customer(
-  new Age(70),
+  new Age(44),
   CINEMA_CITIZEN_CATEGORY.Guest,
   DISABILITY_CATEGORY.None,
-  SCHOOL_CATEGORY.University,
+  SCHOOL_CATEGORY.None,
 );
 const date = new CinemaDate();
 const bestPlan = BestPlanCalculator.calculate(customer, date);
